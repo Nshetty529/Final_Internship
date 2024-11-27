@@ -37,7 +37,7 @@ const ProductListing = () => {
         });
 
         const response = await axios.get(
-          `http://localhost:5000/api/products?${queryParams}`
+          `https://final-internship.onrender.com/api/products?${queryParams}`
         );
 
         setProducts(response.data.data.products);
@@ -108,7 +108,7 @@ const ProductListing = () => {
   const handleAddToCart = async (productId) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "https://final-internship.onrender.com/api/cart/add",
         { productId, quantity: 1 },
         {
           headers: {
