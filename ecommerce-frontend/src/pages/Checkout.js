@@ -24,7 +24,7 @@ const Checkout = () => {
     useEffect(() => {
         const fetchCart = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/cart', {
+                const response = await axios.get('https://final-internship.onrender.com/api/cart', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setCart(response.data);
@@ -53,7 +53,7 @@ const Checkout = () => {
     const cleanCart = async () => {
         try {
             await axios.post(
-                'http://localhost:5000/api/cart/clean',
+                'https://final-internship.onrender.com/api/cart/clean',
                 {},
                 {
                     headers: {
@@ -79,7 +79,7 @@ const Checkout = () => {
             });
     
             const response = await axios.post(
-                'http://localhost:5000/api/orders',
+                'https://final-internship.onrender.com/api/orders',
                 { shippingAddress },
                 {
                     headers: {
