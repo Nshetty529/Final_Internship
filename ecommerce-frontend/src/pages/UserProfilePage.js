@@ -14,7 +14,7 @@ const UserProfilePage = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/api/auth/profile", {
+        const response = await axios.get("https://final-internship.onrender.com/api/auth/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -41,7 +41,7 @@ const UserProfilePage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        "http://localhost:5000/api/auth/profile",
+        "https://final-internship.onrender.com/api/auth/profile",
         { ...user },
         {
           headers: {
