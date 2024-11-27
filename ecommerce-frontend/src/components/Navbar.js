@@ -38,14 +38,6 @@ const Navbar = () => {
         <i className="fas fa-box"></i>
         <span>Products</span>
       </Link>
-      <Link to="/admin/orders" className="nav-link" onClick={handleLinkClick}>
-        <i className="fas fa-shopping-bag"></i>
-        <span>Orders</span>
-      </Link>
-      <Link to="/admin/users" className="nav-link" onClick={handleLinkClick}>
-        <i className="fas fa-users"></i>
-        <span>Users</span>
-      </Link>
       <div className={`nav-dropdown ${isDropdownOpen ? 'active' : ''}`}>
         <button className="nav-dropdown-btn" onClick={toggleDropdown}>
           <i className="fas fa-user-shield"></i>
