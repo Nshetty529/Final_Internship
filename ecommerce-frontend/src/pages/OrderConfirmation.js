@@ -15,7 +15,7 @@ const OrderConfirmation = () => {
         const fetchOrder = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/api/orders/${orderId}`,
+                    `https://final-internship.onrender.com/api/orders/${orderId}`,
                     {
                         headers: { Authorization: `Bearer ${token}` }
                     }
