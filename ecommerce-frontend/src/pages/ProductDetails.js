@@ -18,7 +18,7 @@ const ProductDetail = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+                const response = await axios.get(`https://final-internship.onrender.com/api/products/${id}`);
                 setProduct(response.data);
                 setLoading(false);
             } catch (err) {
@@ -39,7 +39,7 @@ const ProductDetail = () => {
         try {
             setAddingToCart(true);
             await axios.post(
-                'http://localhost:5000/api/cart/add',
+                'https://final-internship.onrender.com/api/cart/add',
                 { 
                     productId: product._id, 
                     quantity 
