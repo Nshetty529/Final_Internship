@@ -16,7 +16,7 @@ const AdminOrders = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/orders?page=${page}&limit=10`,
+        `https://final-internship.onrender.com/api/orders?page=${page}&limit=10`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
