@@ -13,7 +13,7 @@ const OrderHistory = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/orders', {
+                const response = await axios.get('https://final-internship.onrender.com/api/orders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(response.data);
