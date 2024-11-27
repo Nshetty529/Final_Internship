@@ -23,7 +23,7 @@ const LoginPage = () => {
       setLoading(true);
       setError('');
 
-      const response = await axios.post('http://localhost:5000/api/auth/login', {
+      const response = await axios.post('https://final-internship.onrender.com/api/auth/login', {
         email,
         password
       });
