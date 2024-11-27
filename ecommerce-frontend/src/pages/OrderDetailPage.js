@@ -12,7 +12,7 @@ const OrderDetailsPage = () => {
     const fetchOrderDetails = async () => {
       try {
         const token = localStorage.getItem("token"); // Retrieve token from localStorage
-        const response = await axios.get(`http://localhost:5000/api/orders/${id}`, {
+        const response = await axios.get(`https://final-internship.onrender.com/api/orders/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Include token in headers
           },
