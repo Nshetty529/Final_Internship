@@ -24,7 +24,7 @@ const AdminProducts = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/products?page=${page}&limit=10`,
+        `https://final-internship.onrender.com/api/products?page=${page}&limit=10`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ const AdminProducts = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/api/products/${editProduct._id}`,
+        `https://final-internship.onrender.com/api/products/${editProduct._id}`,
         {
           name: editProduct.name,
           salePrice: parseFloat(editProduct.salePrice),
@@ -82,7 +82,7 @@ const AdminProducts = () => {
     if (window.confirm("Are you sure you want to delete this product?")) {
       try {
         const token = localStorage.getItem("token");
-        await axios.delete(`http://localhost:5000/api/products/${productId}`, {
+        await axios.delete(`https://final-internship.onrender.com/api/products/${productId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
