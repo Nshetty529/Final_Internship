@@ -10,7 +10,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/products");
+        const response = await axios.get("https://final-internship.onrender.com/api/products");
         const products = response.data.data.products;
 
         // Get featured products (first 4 products with highest rating)
